@@ -44,14 +44,15 @@ img {
   padding: 188px 0;
   background-image: url(/images/bg-image.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center center;
-  background-size: 100% 600px;
   background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(/images/bg-image.jpg);
+  max-width: 1440px;
 }
 
 .main-title h1 {
@@ -114,6 +115,8 @@ img {
 
 .header-content {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .navigation {
@@ -141,23 +144,24 @@ img {
   font-weight: normal;
 }
 
-.studio-hover {
+.button-link {
   position: relative;
 }
 
-.studio-hover::before {
+.button-link::after {
   content: "";
-  width: 48px;
+  width: 100%;
   height: 4px;
   border-radius: 2px;
   background: #404bbf;
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: -1px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: scaleX(0);
 }
 
-.studio-hover:hover::before {
+.button-link:hover::after {
   transform: scaleX(1);
   transition: transform 0.25s;
 }
@@ -180,6 +184,7 @@ img {
   border-radius: 4px;
   margin-right: auto;
   margin-left: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover {
@@ -245,6 +250,7 @@ img {
   text-decoration: none;
   margin: 0;
   padding: 20px 0 20px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-address:hover {
@@ -345,7 +351,17 @@ img {
 .team-cards {
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
-  background: var(--WHITE, #fff);
+  background: #fff;
+  box-shadow: 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.social:hover {
+  background-color: #404bbf;
+}
+
+.social:focus {
+  background-color: #404bbf;
 }
 
 /* #endregion */
@@ -384,6 +400,16 @@ img {
 
 .portfolio-cards {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-cards:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.apps-text:hover {
+  transform: translateY(0%);
 }
 
 .box {
@@ -392,22 +418,18 @@ img {
 }
 
 .overlay {
-  background-color: #4d5ae5;
-  color: #f4f4fd;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.32px;
   position: absolute;
-  text-align: left;
-  padding: 40px 32px 0 32px;
   top: 0;
-  left: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
   width: 100%;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-cards:hover .overlay {
@@ -417,6 +439,9 @@ img {
 /* #endregion */
 
 .icon-feautures {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 264px;
   height: 112px;
   flex-shrink: 0;
@@ -465,25 +490,52 @@ img {
   fill: #4d5ae5;
 }
 
+.icon {
+  fill: #f4f4fd;
+}
+
+.social {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social:hover {
+  background-color: #404bbf;
+}
+
+.social:focus {
+  background-color: #404bbf;
+}
+
 .social-media {
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px;
-  padding-bottom: 16px;
-  letter-spacing: 0.32px;
-}
-
-.footer-social {
-  align-self: center;
-  display: inline-block;
-  margin-bottom: 132px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
 }
 
 .footer-social .social-links {
   gap: 16px;
+}
+
+.social-links-footer:focus {
+  background-color: #31d0aa;
+}
+
+footer .container {
+  display: flex;
+  align-items: baseline;
+  margin-right: 120px;
+  gap: 120px;
+  margin-left: 156px;
+}
+
+.icon-footer {
+  fill: #f4f4fd;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* #region footer */
@@ -512,9 +564,4 @@ img {
   display: inline-block;
 }
 
-footer .container {
-  display: inline-flex;
-  gap: 120px;
-  margin-left: 156px;
-}
 /* #endregion */
