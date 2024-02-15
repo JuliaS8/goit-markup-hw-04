@@ -141,6 +141,27 @@ img {
   font-weight: normal;
 }
 
+.studio-hover {
+  position: relative;
+}
+
+.studio-hover::before {
+  content: "";
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background: #404bbf;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transform: scaleX(0);
+}
+
+.studio-hover:hover::before {
+  transform: scaleX(1);
+  transition: transform 0.25s;
+}
+
 /* #endregion */
 
 /* #region button */
@@ -355,14 +376,42 @@ img {
   row-gap: 48px;
 }
 
-.portfolio-cards {
-  width: calc((100% - 48px) / 3);
-}
-
 .cards-border {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+}
+
+.portfolio-cards {
+  width: calc((100% - 48px) / 3);
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  background-color: #4d5ae5;
+  color: #f4f4fd;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  position: absolute;
+  text-align: left;
+  padding: 40px 32px 0 32px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.portfolio-cards:hover .overlay {
+  transform: translateX(0);
 }
 
 /* #endregion */
