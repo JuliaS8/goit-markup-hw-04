@@ -135,6 +135,11 @@ img {
   display: block;
 }
 
+.menu-link {
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .contacts-items {
   display: flex;
   gap: 40px;
@@ -364,6 +369,22 @@ img {
   background-color: #404bbf;
 }
 
+.social-members .link {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-members .link:hover {
+  background-color: #404bbf;
+}
+
+.social-members .link:focus {
+  background-color: #404bbf;
+}
+
+.social-members svg {
+  fill: #f4f4fd;
+}
+
 /* #endregion */
 
 /* region apps */
@@ -408,7 +429,7 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.apps-text:hover {
+.cards-border .apps-text:hover {
   transform: translateY(0%);
 }
 
