@@ -43,6 +43,7 @@ img {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+  max-width: 1440px;
   padding: 188px 0;
   background-image: url(../images/bg-image.jpg);
   background-repeat: no-repeat;
@@ -54,10 +55,6 @@ img {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/bg-image.jpg);
-}
-
-.main-title .background {
-  max-width: 1440px;
 }
 
 .main-title h1 {
@@ -151,6 +148,7 @@ img {
 
 .menu-link .underline {
   color: #404bbf;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .underline {
