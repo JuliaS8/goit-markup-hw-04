@@ -820,12 +820,11 @@ footer .container {
   line-height: 1.5;
   letter-spacing: 0.04em;
   display: block;
-  min-width: 169px;
+  min-width: 165px;
   height: 40px;
   border: none;
   border-radius: 4px;
   padding: 8px 24px;
-  gap: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -834,6 +833,7 @@ footer .container {
 
 .icon-tg {
   max-width: 24px;
+  margin-left: 16px;
 }
 
 .button-subscribe:hover {
@@ -854,7 +854,6 @@ footer .container {
   border-radius: 4px;
   border: 1px solid #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  background-color: #2e2f42;
   color: #fff;
   font-size: 12px;
   font-style: normal;
@@ -862,6 +861,7 @@ footer .container {
   line-height: 24px;
   letter-spacing: 0.48px;
   padding-left: 16px;
+  background-color: transparent;
 }
 
 .input-email:focus-within {

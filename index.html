@@ -68,74 +68,8 @@
             Effective Solutions for Your Business
           </h1>
           <a href="#overlay-registration" class="button-overlay">
-          <button type="button" class="button">Order Service</button>
+            <button type="button" class="button">Order Service</button>
           </a>
-        </div>
-        
-        <div class="overlay-registration" id="overlay-registration">
-          <form class="registration-form" name="registration">
-                <a href="#" class="btn-close-link">
-                <button class="btn-close" type="button">
-                  <svg class="icon-close" width="24" height="24">
-                  <use href="./images/icons.svg#icon-close"></use>
-                </svg>
-                </button>
-                </a>
- 
-            <p class="registration-text">
-              Leave your contacts and we will call you back
-            </p>
-            <div class="input-forms">
-            <label class="form-label">
-              Name
-              <i class="fas fa-user">
-                <svg class="icon" width="18" height="18">
-                  <use href="./images/icons.svg#icon-person-black"></use>
-                  </svg>
-              </i>
-              <input class="form-input" type="text" name="username" autofocus
-                required/>
-            </label>
-            <label class="form-label">
-              Phone
-              <i class="fas fa-phone">
-                <svg class="icon" width="18" height="24">
-                  <use href="./images/icons.svg#icon-phone-black"></use>
-                  </svg>
-              </i>
-              <input class="form-input" type="text" name="phone" required />
-            </label>
-            <label class="form-label">
-              <i class="fas fa-email">
-                <svg class="icon" width="18" height="24">
-                  <use href="./images/icons.svg#icon-email-black"></use>
-                  </svg>
-              </i>
-              Email
-              <input class="form-input" type="email" name="email"  required/>
-            </label>
-            <label class="form-label">
-              Comment
-              <textarea
-                class="form-input-t"
-                type="text"
-                name="comment"
-                rows="5"
-                placeholder="Text input"
-              >
-              </textarea>
-            </label>
-            </div>
-            <div class="checkbox-privacy">
-            <label>
-             <input class="checkbox-done" type="checkbox" name="privacy-policy" value="music" checked />
-            </label>
-            <p>I accept the terms and conditions of the <a href="" class="privacy" target="_blank">Privacy Policy</a>
-            </div>
-            <button type="submit" class="button-send">Send</button>
-          </form>
-          </div>
-         
         </div>
       </section>
 
@@ -606,15 +540,95 @@
                 placeholder="E-mail"
               />
             </label>
-            <button class="button-subscribe" type="button">
-              Subscribe
-              <svg class="icon-tg" with="24" height="24">
-                <use href="./images/icons.svg#icon-icon-telegram"></use>
-              </svg>
-            </button>
+            <label>
+              <button class="button-subscribe" type="button">
+                Subscribe
+                <svg class="icon-tg" width="24" height="24">
+                  <use href="./images/icons.svg#icon-icon-telegram"></use>
+                </svg>
+              </button>
+            </label>
           </form>
         </div>
       </div>
     </footer>
+    <div class="overlay-registration" id="overlay-registration">
+      <form class="registration-form" name="registration">
+        <a href="#" class="btn-close-link">
+          <button class="btn-close" type="button">
+            <svg class="icon-close" width="24" height="24">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </a>
+
+        <p class="registration-text">
+          Leave your contacts and we will call you back
+        </p>
+        <div class="input-forms">
+          <label class="form-label">
+            Name
+            <i class="fas fa-user">
+              <svg class="icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person-black"></use>
+              </svg>
+            </i>
+            <input
+              class="form-input"
+              type="text"
+              name="username"
+              autofocus
+              required
+            />
+          </label>
+          <label class="form-label">
+            Phone
+            <i class="fas fa-phone">
+              <svg class="icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone-black"></use>
+              </svg>
+            </i>
+            <input class="form-input" type="text" name="phone" required />
+          </label>
+          <label class="form-label">
+            <i class="fas fa-email">
+              <svg class="icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email-black"></use>
+              </svg>
+            </i>
+            Email
+            <input class="form-input" type="email" name="email" required />
+          </label>
+          <label class="form-label">
+            Comment
+            <textarea
+              class="form-input-t"
+              type="text"
+              name="comment"
+              rows="5"
+              placeholder="Text input"
+            >
+            </textarea>
+          </label>
+        </div>
+        <div class="checkbox-privacy">
+          <label>
+            <input
+              class="checkbox-done"
+              type="checkbox"
+              name="privacy-policy"
+              value="music"
+              checked
+            />
+          </label>
+          <p>
+            I accept the terms and conditions of the
+            <a href="" class="privacy" target="_blank">Privacy Policy</a>
+          </p>
+        </div>
+
+        <button type="submit" class="button-send">Send</button>
+      </form>
+    </div>
   </body>
 </html>
